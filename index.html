@@ -114,8 +114,43 @@
                   <h3><b>Autonomous and<br>Mobile Robotics</b></h3>
                 </header>
                 <div class="content">
+                  <!-- 2021/2022 -->
                   <header>
-                    <h3><a href="">Improving footstep planning algorithms by efficient nearest neighbor searching</a></h3>
+                    <h3>Autonomous humanoid navigation in large-scale environments</h3>
+                    <p>Monica De Pucchio, Elisa Foderaro, Francesco Petri</p>
+                  </header>
+                  <p>Autonomous navigation in large-scale environments remains a major challenge in robotic systems. Recent
+                    research ideas presented during the DARPA SubT Challenge showed that it is possible to explore and
+                    navigate complex unknown environments using both ground and aerial vehicles. The aim of this project is
+                    to extend our humanoid navigation framework (Ferrari et al.) by implementing a global-planner (Dang et
+                    al.) and by integrating it with our RRT*-based footstep planner, which will act as a local planner.
+                    Simulations must be performed to validate the implementation. This project must be implemented in C++.</p>
+                  <strong>References</strong>
+											<ul>
+												<li>Dang et al., “Graph-based Subterranean Exploration Path Planning using Aerial and Legged Robots”, Journal of Field Robotics 2020</li>
+                        <li>Ferrari et al., “An Integrated Motion Planning/Controller for Humanoid Robots on Uneven Ground”, ECC 2019</li>
+											</ul>
+                  <header>
+                    <h3><a href="docs/AMR/reports/Planning_parking_maneuvers_for_a_car_trailer_vehicle.pdf">Planning parking maneuvers for a car-trailer vehicle</a></h3>
+                    <p>Leandro Maglianella, Lorenzo Nicoletti, Olga Sorokoletova</p>
+                  </header>
+                  <p>Being a nonholonomic vehicle, planning parking maneuvers for a car-trailer vehicle requires accounting for
+                    the kinematic constraints on the system. In sampling-based planners like RRT, this can be done by
+                    sampling the input space and forward integrating the system generating dynamically feasible motion
+                    primitives. The car-trailer system is however unstable in backward motion, exhibiting the so-called
+                    “jackknifing” phenomenon, in which the hitch angle between the car and the trailer heading angles
+                    diverges, leading to a loss of maneuverability and ultimately to self collision. For this reason, planning
+                    backward trajectories requires special care. The project consists in the implementation of an RRT-based
+                    planner for the car-trailer vehicle using the Open Motion Planning Library (OMPL), possibly implementing
+                    the technique presented in the accompanying paper to stabilize backward motion primitives. The project
+                    must be implemented in C++. This project has been supervised together with <a href="https://phd.uniroma1.it/web/TOMMASO-BELVEDERE_nP1705326_IT.aspx">Tommaso Belvedere</a>.</p>
+                  <strong>References</strong>
+											<ul>
+												<li>Evestedt et al, “Motion planning for a reversing general 2-trailer configuration using Closed-Loop RRT”, IROS 2016</li>
+											</ul>
+                  <!-- 2020/2021 -->
+                  <header>
+                    <h3><a href="docs/AMR/reports/Improving_footstep_planning_algorithms_by_efficient_nearestneighbor_searching.pdf">Improving footstep planning algorithms by efficient nearest neighbor searching</a></h3>
                     <p>Ionut Marian Motoi, Leonardo Saraceni, Giuseppe Sensolini Arr&agrave;</p>
                   </header>
                   <p>One of the bottlenecks in the performance of sampling-based motion planning algorithms is the computational cost of the nearest-neighbor operation. It is, hence, essential to develop efficient techniques for nearest-neighbor searching in order to keep the planning time low. The aim of this project consists in extending the RRT and RRT* footstep planners proposed by our group by implementing a self balancing k-d tree on non-Euclidean topologies. Simulations on V-REP/CoppeliaSim must be performed to validate the method. This project must be implemented in C++ using ROS and our footstep planning framework.</p>
